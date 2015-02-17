@@ -1,0 +1,57 @@
+//soj 1321, big int divide and find prime 
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+
+#define MAXN 105
+#define MAXM 1000000
+
+int prime[MAXM], primeCount;
+char bigNum[MAXN];
+int k;
+
+void init_prime() {
+  primeCount = 1;
+  prime[0] = 2;
+  for (int i = 3; i <= MAXM; ++ i) {
+    bool isPrime = true;
+    for (int j = 0, max = sqrt(i); j < primeCount; ++ j)
+      if (i % prime[j] == 0) {
+        isPrime = false;
+        break;
+      } else if (prime[j] > max) break;
+    
+    if (isPrime) prime[primeCount ++] = i;
+  }
+}
+
+bool init_input() {
+  scanf("%s %d", bigNum, &k);
+  return !(strlen(bigNum) == 1 && bigNum[0] == '0' && k == 0);
+}
+
+int get_remain(int divisor) {
+  int now = 0;
+  for (int i = 0, size = strlen(bigNum); i < size; ++ i) {
+    now = now * 10 + (bigNum[i] - '0');
+    if (now >= divisor) now %= divisor;
+  }
+  return now;
+}
+
+int judge() {
+  for (int i = 0; i < primeCount && prime[i] < k; ++ i) {
+    if (get_remain(prime[i]) == 0) return prime[i];
+  }
+  return 0;
+}
+
+int main() {
+  init_prime();
+  while (init_input()) {
+    int ret = judge();
+    if (ret == 0) printf("GOOD\n");
+    else printf("BAD %d\n", ret);
+  }
+  return 0;
+}

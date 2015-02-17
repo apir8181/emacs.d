@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+
+#define MAXM 100005
+#define MAXN 505
+
+#define maxint(a, b) (a > b ? a : b)
+
+int f[MAXM];
+int cost[MAXN], val[MAXN];
+int n, m;
+
+void input() {
+  scanf("%d%d", &n, &m);
+  for (int i = 1; i <= n; ++ i)
+    scanf("%d%d", &cost[i], &val[i]);
+}
+
+int solve() {
+  for (int i = m; i >= 0; -- i) {
+    f[i] = i >= cost[n] ? val[n] : 0;
+  }
+
+  for (int j = n - 1; j >= 1; -- j) {
+    for (int i = m; i >= cost[j]; -- i) {
+      f[i] = maxint(f[i], f[i-cost[j]] + val[j]);
+    }
+  }
+
+  return f[m];
+}
+
+int main() {
+  input();
+  printf("%d\n", solve());
+  return 0;
+}

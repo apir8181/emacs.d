@@ -1,0 +1,111 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/" . "kaze/")
+ ("/home/kaze/Storage/ML/机器学习基石/" . "hw1/")
+ ("/home/kaze/Storage/ML/机器学习技法/" . "hw1/")
+ ("/home/kaze/code/cpp/cpp_util/algorithm/" . "AVLTree/")
+ ("/home/kaze/code/cpp/cpp_util/" . "algorithm/")
+ ("/home/kaze/" . ".emacs.d/")
+ ("/home/kaze/code/cpp/algorithm/" . "Increment/")
+ ("/home/kaze/code/cpp/" . "algorithm/")
+ ("/home/kaze/code/" . "scala/")
+ ("/home/kaze/Storage/ML/shogun/shogun-swig3/shogun/examples/undocumented/" . "libshogun/")
+ ("/home/kaze/Storage/ML/shogun/shogun-swig3/shogun/examples/" . "undocumented/")
+ ("/home/kaze/Storage/ML/shogun/shogun-swig3/shogun/" . "examples/")
+ ("/home/kaze/Storage/ML/shogun/shogun-swig3/" . "shogun/")
+ ("/home/kaze/Storage/ML/shogun/" . "shogun-swig3/")
+ ("/home/kaze/Storage/ML/" . "机器学习技法/")
+ ("/home/kaze/Storage/" . "ML/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/kaze/.emacs.d/"
+ "emacs.d/"
+ "/home/kaze/Storage/ML/shogun/shogun-swig3/shogun/examples/undocumented/libshogun/"
+ "/home/kaze/"
+ "/home/kaze/Storage/ML/机器学习技法/hw1/"
+ "/home/kaze/Storage/ML/机器学习基石/hw1/"
+ "/home/kaze/code/cpp/algorithm/Euler/"
+ "/home/kaze/code/cpp/algorithm/DP/"
+ "/home/kaze/code/cpp/algorithm/Graph_Travel/"
+ "/home/kaze/code/cpp/cpp_util/algorithm/AVLTree/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "init.el"
+ "converter_hessianlocallylinearembedding.cpp"
+ "base_migration_type_conversion.cpp"
+ "main.py"
+ "main.oy"
+ "balanced_conditional_probability_tree.cpp"
+ "uva_10054.cpp"
+ "soj_1197.cpp"
+ "soj_1211.cpp"
+ "custom.el"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/kaze/code/cpp/algorithm/Increment/" (21339 31680 310910 658000) "./" "uva_688.cpp" "../")
+
+ ("/home/kaze/code/cpp/algorithm/DataStructure/" (21688 29530 506684 169000) "a.out" "max_queue_constant.cpp" "./" "../")
+
+ ("/home/kaze/" (21731 12194 690437 329000) ".sunpinyin/" ".bash_history" ".bashrc" ".scala_history" ".wireshark/" ".spark_history" "Downloads/" ".xprofile" ".rediscli_history" "MATLAB/" ".Xmodmap" "VirtualBox VMs/" ".srun.data" ".cache/" ".color/" ".filezilla/" ".mysql/" ".KeePass.kdbx" ".purple/" ".cabal/" ".gnome2_private/" ".python-eggs/" ".java/" ".gem/" ".pki/" ".xinitrc" ".bash_profile" "Pictures/" ".dbus/" ".mplayer/" ".navicat/" ".python_history" "tmp/" ".config/" ".dia/" ".local/" ".kingsoft/" "Backups/" ".esd_auth" ".gimp-2.8/" ".IdeaIC14/" ".sbt/" ".npm/" "Desktop/" ".mono/" ".ecb-tip-of-day.el" ".m2/" ".adobe/" ".xmobarrc" ".Skype/" "Storage/" ".longene/" ".fehbg" ".aliedit/" ".ccache/" ".ICEauthority" ".android/" ".pip/" ".mysql_history" ".gnome2/" "weka.log" ".emacs.d/" ".vim/" ".distlib/" ".gnome/" ".xdvirc" ".xsession-errors" "./" ".gtk-bookmarks" ".gitconfig" ".fltk/" "*scratch*" ".zshrc" "books/" ".git-credential-cache/" "code/" ".xmonad/" ".Xresources" ".subversion/" ".zshenv" ".ssh/" ".lesshst" "wallpaper-universal.jpg" ".shutter/" ".viminfo" "Documents/" ".cassandra/" ".putty/" ".matlab/" ".macromedia/" ".thumbnails/" ".ssr/" ".kde4/" ".ivy2/" ".mozilla/" ".recently-used" ".octave_hist" ".gemrc" ".xsel.log" ".dmrc" ".ghc/" "bin/" "todo.org" ".eclipse/" ".gnupg/" ".Xauthority" ".smpd" ".tmux.conf" ".gstreamer-0.10/" "../" "wallpaper" ".IdeaIC13/")
+
+ ("/home/kaze/Storage/ML/shogun/shogun-swig3/shogun/examples/undocumented/libshogun/" (21731 11977 602357 713000) "library_dyn_int.cpp" "transfer_multitasklogisticregression.cpp" "classifier_libsvm.cpp" "features_subset_labels.cpp" "classifier_lda.cpp" "regression_gaussian_process_sum.cpp" "classifier_multiclasslibsvm.cpp" "mathematics_confidence_intervals.cpp" "statistics_quadratic_time_mmd.cpp" "base_migration_new_buggy.cpp" "splitting_LOO_crossvalidation.cpp" "converter_multidimensionalscaling.cpp" "modelselection_parameter_tree.cpp" "base_load_file_parameters.cpp" "preprocessor_randomfouriergauss.cpp" "modelselection_grid_search_string_kernel.cpp" "so_fg_multilabel.cpp" "so_fg_model.cpp" "features_copy_subset_simple_features.cpp" "parameter_iterate_sgobject.cpp" "parameter_set_from_parameters.cpp" "base_parameter_map.cpp" "classifier_bagging_liblinear.cpp" "converter_localitypreservingprojections.cpp" "basic_minimal.cpp" "data.svmlight" "base_load_all_file_parameters.cpp" "base_migration_type_conversion.cpp" "converter_stochasticproximityembedding.cpp" "classifier_minimal_svm.cpp" "streaming_onlineliblinear_dense.cpp" "regression_gaussian_process_laplace.cpp" "random_conditional_probability_tree.cpp" "so_hmsvm_mosek_simple.cpp" "so_factorgraph.cpp" "minibatchKMeans.cpp" "regression_gaussian_process_product.cpp" "neuralnets_deep_belief_network.cpp" "modelselection_model_selection_parameters_test.cpp" "classifier_qda.cpp" "balanced_conditional_probability_tree.cpp" "variational_approx_example.cpp" "converter_laplacianeigenmaps.cpp" "converter_factoranalysis.cpp" "converter_localtangentspacealignment.cpp" "structure_hmsvm_mosek.cpp" "splitting_standard_crossvalidation.cpp" "classifier_multiclass_ecoc_random.cpp" "evaluation_cross_validation_locked_comparison.cpp" "structure_discrete_hmsvm_bmrm.cpp" "so_multiclass_BMRM.cpp" "neuralnets_convolutional.cpp" "modelselection_grid_search_mkl.cpp" "io_linereader.cpp" "statistics.cpp" "modelselection_parameter_combination_test.cpp" "random_fourier_features.cpp" "streaming_from_dense.cpp" "kernel_gaussian.cpp" "features_subset_simple_features.cpp" "streaming_onlinesvmsgd.cpp" "so_multilabel.cpp" "statistics_linear_time_mmd.cpp" "classifier_svmlight_string_features_precomputed_kernel.cpp" "features_subset_stack.cpp" "statistics_mmd_kernel_selection.cpp" "classifier_mklmulticlass.cpp" "kernel_revlin.cpp" "classifier_multiclass_prob_heuristics.cpp" "parameter_iterate_float64.cpp" "library_indirect_object.cpp" "sparseFeatures.txt" "classifier_newtontest.cpp" "multiclass_labels.txt" "io_libsvm_multilabel.cpp" "library_hash.cpp" "so_multiclass.cpp" "library_circularbuffer.cpp" "base_map_parameters.cpp" "regression_gaussian_process_gaussian.cpp" "base_migration_dropping_and_new.cpp" "neuralnets_deep_autoencoder.cpp" "streaming_stringfeatures.cpp" "mathematics_lapack.cpp" "serialization_basic_tests.cpp" "kernel_machine_train_locked.cpp" "classifier_latent_svm.cpp" "kernel_custom_kernel.cpp" "classifier_mkl_svmlight_modelselection_bug.cpp" "library_map.cpp" "structure_plif_hmsvm_bmrm.cpp" "library_dynarray.cpp" "preprocessor_fisherlda.cpp" "evaluation_cross_validation_mkl_weight_storage.cpp" "splitting_stratified_crossvalidation.cpp" "classifier_gaussiannaivebayes.cpp" "library_hdf5.cpp" "classifier_gaussian_process_binary_classification.cpp" "evaluation_cross_validation_multiclass_mkl.cpp" "streaming_vwfeatures.cpp" "classifier_multiclass_ecoc_discriminant.cpp" "converter_jade_bss.cpp" "modelselection_combined_kernel_sub_parameters.cpp" "hashed_features_example.cpp" "modelselection_apply_parameter_tree.cpp" "#balanced_conditional_probability_tree.cpp#" "regression_gaussian_process_fitc.cpp" "evaluation_cross_validation_classification.cpp" "optimization_lbfgs.cpp" "converter_diffusionmaps.cpp" "regression_libsvr.cpp" "evaluation_cross_validation_multiclass.cpp" "features_copy_subset_sparse_features.cpp" "modelselection_grid_search_multiclass_svm.cpp" "classifier_featureblocklogisticregression.cpp" "modelselection_grid_search_linear.cpp" "base_migration_multiple_dependencies.cpp" "classifier_larank.cpp" "classifier_libsvm_probabilities.cpp" "converter_hessianlocallylinearembedding.cpp" "classifier_multiclass_shareboost.cpp" "neuralnets_basic.cpp" "library_mldatahdf5.cpp" "streaming_onlineliblinear_sparse.cpp" "classifier_multiclasslinearmachine.cpp" "converter_kernellocallylinearembedding.cpp" "features_dense_real_modular.cpp" "parameter_modsel_parameters.cpp" "classifier_multiclass_relaxedtree.cpp" "serialization_multiclass_labels.cpp" "kernel_custom.cpp" "serialization_file_formats.cpp" "classifier_multiclass_ecoc.cpp" "converter_locallylinearembedding.cpp" "labels_binary_fit_sigmoid.cpp" "streaming_vowpalwabbit.cpp" "library_gc_array.cpp" "converter_linearlocaltangentspacealignment.cpp" "evaluation_cross_validation_regression.cpp" "regression_gaussian_process_ard.cpp" "kernel_custom_index.cpp" "clustering_kmeans.cpp" "converter_neighborhoodpreservingembedding.cpp" "metric_lmnnn.cpp" "evaluation_cross_validation_knn.cpp" "library_serialization.cpp" "modelselection_grid_search_kernel.cpp" "library_set.cpp" "statistics_hsic.cpp" "regression_gaussian_process_simple_exact.cpp" "classifier_nearest_centroid.cpp" "transfer_multitaskleastsquaresregression.cpp" "classifier_knn.cpp" "converter_isomap.cpp" "modelselection_grid_search_krr.cpp" "../" "./")
+
+ ("/home/kaze/.emacs.d/" (21731 11954 115366 865000) "starter-kit-defuns.el" "starter-kit-perl.org" "ido.last" "markdown-mode.el" "eshell/" "COPYING" "haskell-mode/" "tree/" "starter-kit.org" "auto-save-list/" "xclip.el" "starter-kit-publish.org" "starter-kit-registers.org" "starter-kit-haskell.org" "session.1097506aab782eee05141898201844715400000007580044" "elpa/" "README" "custom.el" "themes/" "snippets/" "starter-kit-latex.org" "starter-kit-yasnippet.org" "starter-kit-misc-recommended.org" "init.el" "session.108cb3422befd7a72614213237488670100000009880040" "starter-kit-misc.org" "backups/" "starter-kit-scala.org" "starter-kit-lisp.org" "starter-kit-eshell.org" "./" "starter-kit-gnus.org" "starter-kit-org.org" "starter-kit-g-client.org" "starter-kit-registers.el" "starter-kit-bindings.el" "starter-kit-ruby.org" "literate-starter-kit-pkg.el" "src/" "places" "starter-kit-bindings.org" "Makefile" "starter-kit-misc.el" "ac-comphist.dat" "starter-kit-defuns.org" "starter-kit.el" "starter-kit-js.org" "starter-kit-python.org" "yaml-mode-master/" "../")
+
+ ("/home/kaze/Storage/ML/机器学习技法/hw1/" (21731 10189 673734 405000) "main.py" "features.train.txt" "./" "#main.py#" "iterate.dat" "../")
+
+ ("/home/kaze/Storage/ML/机器学习基石/hw1/" (21731 7036 202588 627000) "main.py" "./" "main.pyc" "../" "nonlinear_train.dat" "linear.dat" "nonlinear_test.dat")
+
+ ("/home/kaze/Storage/ML/机器学习基石/" (21723 65258 890268 821000) "10 - 4 - Gradient Descent (19-18).mp4" "16 - 4 - Power of Three (08-49).mp4" "8 - 4 - Weighted Classification (16-54).mp4" "4 - 1 - Learning is Impossible- (13-32).mp4" "9 - 3 - Generalization Issue (20-34).mp4" "9 - 1 - Linear Regression Problem (10-08).mp4" "2 - 1 - Perceptron Hypothesis Set (15-42).mp4" "3 - 4 - Learning with Different Input Space (14-13).mp4" "11 - 1 - Linear Models for Binary Classification (21-35) (1).mp4" "11 - 2 - Stochastic Gradient Descent (11-39).mp4" "15 - 2 - Validation (13-24).mp4" "11 - 4 - Multiclass via Binary Classification (11-35) (1).mp4" "10 - 1 - Logistic Regression Problem (14-33).mp4" "3 - 3 - Learning with Different Protocol (11-09).mp4" "12 - 2 - Nonlinear Transform (09-52).mp4" "6 - 1 - Restriction of Break Point (14-18).mp4" "11 - 1 - Linear Models for Binary Classification (21-35).mp4" "5 - 3 - Effective Number of Hypotheses (16-17).mp4" "4 - 4 - Connection to Real Learning (18-06).mp4" "11 - 4 - Multiclass via Binary Classification (11-35).mp4" "7 - 4 - Interpreting VC Dimension (17-13).mp4" "10 - 2 - Logistic Regression Error (15-58).mp4" "13 - 4 - Dealing with Overfitting (10-49).mp4" "9 - 2 - Linear Regression Algorithm (20-03).mp4" "12 - 1 - Quadratic Hypothesis (23-47).mp4" "10 - 3 - Gradient of Logistic Regression Error (15-38).mp4" "9 - 4 - Linear Regression for Binary Classification (11-23).mp4" "8 - 1 - Noise and Probabilistic Target (17-01).mp4" "8 - 3 - Algorithmic Error Measure (13-46).mp4" "4 - 2 - Probability to the Rescue (11-33).mp4" "14 - 4 - General Regularizers (13-28).mp4" "5 - 1 - Recap and Preview (13-44).mp4" "6 - 2 - Bounding Function- Basic Cases (06-56).mp4" "6 - 4 - A Pictorial Proof (16-01).mp4" "./" "hw1/" "14 - 1 - Regularized Hypothesis Set (19-16).mp4" "16 - 1 - Occam-'s Razor (10-08).mp4" "8 - 2 - Error Measure (15-10).mp4" "14 - 2 - Weight Decay Regularization (24-08).mp4" "15 - 3 - Leave-One-Out Cross Validation (16-06).mp4" "13 - 2 - The Role of Noise and Data Size (13-36).mp4" "7 - 3 - Physical Intuition of VC Dimension (6-11).mp4" "3 - 1 - Learning with Different Output Space (17-26).mp4" "../" "15 - 4 - V-Fold Cross Validation (10-41).mp4" "12 - 4 - Structured Hypothesis Sets (09-36).mp4" "7 - 1 - Definition of VC Dimension (13-10).mp4" "16 - 2 - Sampling Bias (11-50).mp4" "13 - 1 - What is Overfitting- (10-45).mp4" "3 - 2 - Learning with Different Data Label (18-12).mp4" "hw4/" "11 - 2 - Stochastic Gradient Descent (11-39) (1).mp4" "hw2/" "7 - 2 - VC Dimension of Perceptrons (13-27).mp4" "16 - 3 - Data Snooping (12-28).mp4" "15 - 1 - Model Selection Problem (16-00).mp4" "11 - 3 - Multiclass via Logistic Regression (14-18) (1).mp4" "4 - 3 - Connection to Learning (16-46).mp4" "hw3/" "11 - 3 - Multiclass via Logistic Regression (14-18).mp4" "2 - 2 - Perceptron Learning Algorithm (PLA) (19-46).mp4" "6 - 3 - Bounding Function- Inductive Cases (14-47).mp4" "14 - 3 - Regularization and VC Theory (08-15).mp4" "2 - 4 - Non-Separable Data (12-55).mp4" "5 - 2 - Effective Number of Lines (15-26).mp4" "13 - 3 - Deterministic Noise (14-07).mp4" "5 - 4 - Break Point (07-44).mp4" "2 - 3 - Guarantee of PLA (12-37).mp4" "12 - 3 - Price of Nonlinear Transform (15-37).mp4")
+
+ ("/home/kaze/Storage/ML/机器学习技法/" (21729 43633 797218 937000) "6 - 3 - Support Vector Regression Dual (13-05).mp4" "3 - 1 - Kernel Trick (20-23).mp4" "4 - 2 - Dual Problem (7-38).mp4" "3 - 4 - Comparison of Kernels (13-35).mp4" "4 - 3 - Messages behind Soft-Margin SVM (13-44).mp4" "1 - 2 - Large-Margin Separating Hyperplane (14-17).mp4" "1 - 4 - Support Vector Machine (15-33).mp4" "2 - 4 - Messages behind Dual SVM (11-18).mp4" "1 - 5 - Reasons behind Large-Margin Hyperplane (13-31).mp4" "3 - 3 - Gaussian Kernel (14-43).mp4" "6 - 1 - Kernel Ridge Regression (17-17).mp4" "3 - 2 - Polynomial Kernel (12-16).mp4" "./" "6 - 4 - Summary of Kernel Models (09-06).mp4" "hw1/" "4 - 4 - Model Selection (9-57).mp4" "5 - 2 - SVM versus Logistic Regression (10-18).mp4" "../" "5 - 3 - SVM for Soft Binary Classification (9-36).mp4" "1 - 1 - Course Introduction (4-07).mp4" "5 - 4 - Kernel Logistic Regression (16-22).mp4" "2 - 1 - Motivation of Dual SVM (15-54).mp4" "4 - 1 - Motivation and Primal Problem (14-27).mp4" "2 - 3 - Solving Dual SVM (14-19).mp4" "2 - 2 - Lagrange Dual SVM (18-50).mp4" "1 - 3 - Standard Large-Margin Problem (19-16).mp4" "6 - 2 - Support Vector Regression Primal (18-44).mp4" "ppt/" "5 - 1 - Soft-Margin SVM as Regularized Model (13-40).mp4")
+
+ ("/home/kaze/code/cpp/algorithm/Euler/" (21731 5859 941269 686000) "欧拉回路.doc" "uva_302.cpp" "./" "uva_117.cpp" "uva_10054.cpp" "#uva_10054.cpp#" "uva_291.cpp" "../")
+
+ ("/home/kaze/code/cpp/algorithm/DP/" (21731 5091 438066 794000) "status_compress.cpp" "soj_1197.cpp" "0nbag.cpp" "a.out" "status_compress_2.cpp" "01bag.cpp" "hiho_week12.cpp" "soj_1221.cpp" "./" "#soj_1197.cpp#" "../")
+
+ ("/home/kaze/code/cpp/algorithm/Graph_Travel/" (21731 3951 55020 283000) "./" "soj_1211.cpp" "../" "soj_1350.cpp")
+
+ ("/home/kaze/code/cpp/cpp_util/algorithm/AVLTree/" (21731 2461 800322 523000) "#AVLTree.cpp#" "./" "AVLTree.cpp" "../")
+
+ ("/home/kaze/code/cpp/cpp_util/algorithm/" (21206 32677 0 0) "shortest_path/" "bit/" "hungary/" "./" "The Magical Splay.pdf" "AVLTree/" "../")
+
+ ("/home/kaze/code/cpp/cpp_util/" (21206 32677 0 0) "threadconcurrent.cpp" "processconcurrent.h" "threadconcurrent.h" "socket.h" ".git/" "./" "sysexception.h" "algorithm/" "threadpool.h" "processpool.h" "../")
+
+ ("/home/kaze/code/scala/" (21552 5775 6648 53000) "./" ".metadata/" "../" "test/")
+
+ ("/home/kaze/code/cpp/algorithm/BigInt/" (21528 6898 444665 53000) "a.out" "./" "big_divide.cpp" "../")
+
+ ("/home/kaze/code/cpp/algorithm/" (21688 27461 876668 264000) "String/" "DataStructure/" "Tree/" "Maching/" "Flow/" "SortCompare.cpp" "Increment/" "Recursive/" "a.out" "SP/" "Graph_Travel/" "DP/" "test.cpp" ".git/" "./" "Search/" "Euler/" "Unknown/" "Numerical/" "BigInt/" "../")
+
+ ("/home/kaze/code/cpp/" (21579 4140 83354 367000) "cpp_util/" "./" "leet_code/" "algorithm/" "soj/" "mmtraining/" "../")
+
+ ("/home/kaze/code/" (21690 1967 330058 545000) "course/" "cpp/" "cSharpProject.zip" "lab/" "yeezhao.tar.gz" "python/" "spark-learn/" "flume-assembly/" "java/" "./" "haskell/" "kaze/" "scala/" "../")
+
+ ("/home/kaze/Storage/ML/shogun/shogun-swig3/shogun/examples/undocumented/" (21724 29710 599211 869000) "lua_modular/" "data/" "r_static/" "elwms_static/" "matlab_static/" "python_modular/" "libshogun/" "ruby_modular/" "csharp_modular/" "python_static/" "cmdline_static/" "octave_static/" "./" "java_modular/" "octave_modular/" "../" "matlab_and_octave/" "r_modular/")
+
+ ("/home/kaze/Storage/ML/shogun/shogun-swig3/shogun/examples/" (21724 29710 559211 384000) "README" "documented/" "CMakeLists.txt" "descriptions/" "generate_documented.sh" "./" "../" "undocumented/")
+
+ ("/home/kaze/Storage/ML/shogun/shogun-swig3/shogun/" (21730 1620 147748 996000) "third_party/" "test_log" "tests/" "test-build/" "data/" ".travis.yml" ".gitignore" "CMakeLists.txt" "cmake/" ".clang_complete" "build/" "NEWS" "benchmarks/" "./" "doc/" "examples/" "applications/" "ChangeLog" ".gitmodules" "README.md" "CTestConfig.cmake" "../" "command_list" "src/" "scripts/" "configs/" ".git/" "COPYING")
+
+ ("/home/kaze/Storage/ML/shogun/shogun-swig3/" (21724 29631 601638 31000) "./" "../" "shogun/")
+
+ ("/home/kaze/Storage/ML/shogun/" (21724 29459 196740 706000) "./" "../" "shogun/" "shogun-swig3/")
+
+ ("/home/kaze/Storage/ML/" (21723 38008 530881 372000) "Perceptron/" "Minist/" "./" "../" "weka-3-6-12/" "机器学习基石/" "shogun/" "机器学习技法/")
+
+ ("/home/kaze/Storage/" (21716 28392 63858 657000) "ML/" "bin/" "python/" "./" "lost+found/" "../" ".Trash-1000/")
+
+ ("/home/" (21208 2694 207830 860000) "lost+found/" "./" "kaze/" "../")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

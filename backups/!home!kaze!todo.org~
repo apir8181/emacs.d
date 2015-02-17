@@ -1,0 +1,35 @@
+* Learn "Machine Learning Tools and Techniques"
+
+** TODO Compare different models
+   123
+** TODO L7
+** TODO L8
+** TODO HW2
+** TODO L9
+** TODO L10
+** TODO L11
+** TODO L12
+** TODO HW3
+** TODO L13
+** TODO L14
+** TODO L15
+** TODO L16
+** TODO HW4
+
+* Browse Shogun ML examples
+* Learn Emacs
+** TODO Learn Emacs Tutorial
+   Learned Command:
+   1. Screen
+      + C-f, forward a char
+      + C-b, backward a char
+      + M-f, forward a word
+      + M-b, backward a word
+      + C-a, move to beign of a line
+      + C-e, move to end of a line
+      + M-a, move to being of a sentence
+      + M-e, move to end of a sentence
+      + C-v, forward screen
+      + M-v, backward screen
+   2. Special Command
+      + C-u <number> <command> repeat command

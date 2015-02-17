@@ -1,0 +1,40 @@
+python baidu_map.py 
+ls
+gdb ./a.out
+ls
+g++ test.cpp 
+./a.out
+g++ test.cpp 
+./a.out
+ls
+ls
+ls
+xmonad --h
+xmonad -help
+xmonad --recompile
+ls
+g++ temp.cpp 
+g++ temp.cpp 
+g++ temp.cpp 
+./a.out 
+g++ temp.cpp 
+./a.out 
+g++ temp.cpp 
+g++ temp.cpp 
+g++ temp.cpp 
+g++ temp.cpp 
+g++ temp.cpp 
+./a.out 
+g++ temp.cpp 
+./a.out 
+g++ -g temp.cpp 
+gdb ./a.out 
+ls
+g++ test-project/
+g++ temp.cpp 
+temp.cpp
+g++ temp.cpp 
+temp.cpp:76:38: error: no match for ‘operator==’ (operand types are ‘std::basic_ostream<char>::__ostream_type {aka std::basic_ostream<char>}’ and ‘bool’)
+temp.cpp:76:38: error: no match for ‘operator==’ (operand types are ‘std::basic_ostream<char>::__ostream_type {aka std::basic_ostream<char>}’ and ‘bool’)
+g++ temp.cpp 
+./a.out 

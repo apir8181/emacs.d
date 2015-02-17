@@ -1,0 +1,177 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.svm import SVC
+from sklearn.cross_validation import train_test_split
+import math
+
+def question_2():
+    X = np.array([(1, 0),
+                  (0, 1),
+                  (0, -1),
+                  (-1, 0),
+                  (0, 2),
+                  (0, -2),
+                  (-2, 0)])
+    Z = np.zeros(X.shape)
+    Y = np.array([-1, -1, -1, +1, +1, +1, +1])
+    
+    for i in range(X.shape[0]):
+        Z[i, 0] = X[i, 1]**2 - 2*X[i, 0] + 3
+        Z[i, 1] = X[i, 0]**2 - 2*X[i, 1] - 3
+
+    print Z
+    plt.plot(Z[:3, 0], Z[:3, 1], 'bx')
+    plt.plot(Z[3:, 0], Z[3:, 0], 'ro')
+    plt.show()
+
+def question_3():
+    from cvxopt import matrix, solvers
+    
+    X = np.array([(1, 0), (0, 1), (0, -1),
+                  (-1, 0), (0, 2), (0, -2), (-2, 0)])
+    Y = np.array([-1, -1, -1, +1, +1, +1, +1])
+    K = (np.dot(X, X.T) + 1) ** 2
+    Q = K * np.dot(Y, Y.T)
+    n = Y.shape[0]
+    
+    P = matrix(Q, (n, n), 'd')
+    q = matrix(-1., (n, 1))
+    A = matrix(Y, (1, n), 'd')
+    b = matrix(.0)
+    G = matrix(-1 * np.eye(n), tc='d')
+    h = matrix(.0, (n, 1))
+    sol = solvers.qp(P, q, G, h, A, b)
+    alpha = np.array(sol['x'])
+
+    print alpha
+    
+
+def read_data(path):
+    X = []
+    Y = []
+    with open(path) as f:
+        for line in f:
+            args = map(lambda x: float(x), line.strip().split("  "))
+            X.append(args[1:])
+            Y.append(int(args[0]))
+    return np.array(X), np.array(Y)
+
+def question_15():
+    X_train, Y_train = read_data('features.train.txt')
+    Y_train[Y_train != 0] = 1
+    clf = SVC(C=.01, kernel='linear', shrinking=False)
+    clf.fit(X_train, Y_train)
+    print np.linalg.norm(clf.coef_, ord=1)
+
+def question_16():
+    X_train, Y_train = read_data('features.train.txt')
+
+    for ova_value in [0, 2, 4, 6, 8]:
+        # calculate ova matrix
+        now_train = np.zeros(Y_train.shape)
+        now_train = (Y_train == ova_value) * 1
+        now_train[now_train == 0] = -1
+        
+        clf = SVC(C=.01, kernel='poly', degree=2, gamma=1,
+                  coef0=1, shrinking=False)
+        clf.fit(X_train, now_train)
+        P = clf.predict(X_train)
+        E_in = sum(P != now_train) / float(P.shape[0])
+        print "{0} vs not {0}, E_in = {1}".format(ova_value, E_in)
+        print "\talpha_sum =", np.sum(clf.dual_coef_ / now_train[clf.support_]) * -1
+
+def question_18():        
+    X_train, Y_train = read_data('features.train.txt')
+    X_test, Y_test = read_data('features.test.txt')
+    Y_train = np.sign(1. * (Y_train == 0) - .01)
+    Y_test = np.sign(1. * (Y_test == 0) - .01)
+
+    for c in [.001, .01, .1, 1, 10]:
+        clf = SVC(C=c, kernel='rbf', gamma=100, shrinking=False)
+        clf.fit(X_train, Y_train)
+
+        # calculate b
+        b = 0
+        idx = np.logical_and(np.fabs(clf.dual_coef_) < c,
+                             np.fabs(clf.dual_coef_) > 0)
+        free_svs = clf.support_[idx.flatten()]
+        for free_sv in free_svs:
+            DX = X_train[free_sv] - X_train[clf.support_]
+            norm = np.linalg.norm(DX, axis=1)
+            b += Y_train[free_sv] + np.dot(clf.dual_coef_,
+                                           np.exp(-100 * norm))
+        b /= len(free_svs)
+
+        # calculate ksi
+        ksi = np.zeros(Y_train.shape)
+        idx = np.fabs(clf.dual_coef_) == c
+        bounded_svs = clf.support_[idx.flatten()]
+        for bounded_sv in bounded_svs:
+            DX = X_train[bounded_sv] - X_train[clf.support_]
+            norm = np.linalg.norm(DX, axis=1)
+            kernel_sum = np.dot(clf.dual_coef_, np.exp(-100 * norm))
+            ksi[bounded_sv] = 1 + (kernel_sum - b) / Y_train[bounded_sv]
+        ksi_sum = np.sum(ksi)
+        
+        # compute E_out
+        P = clf.predict(X_test)
+        E_out = np.sum(P != Y_test) / float(P.shape[0])
+
+        # calculate dual function value
+        dual_val = 0
+        for i in range(len(clf.support_)):
+            for j in range(len(clf.support_)):
+                x_i = X_train[clf.support_[i]]
+                x_j = X_train[clf.support_[j]]
+                ker_val = math.exp(-100 * np.linalg.norm(x_i - x_j))
+                coef = clf.dual_coef_[0, i] * clf.dual_coef_[0, j]
+                dual_val += .5 * coef * ker_val
+        dual_val += c * ksi_sum
+                    
+        print "c =", c
+        print "\tnumber of sv =", clf.support_.shape[0]
+        print "\tE_out =", E_out
+        print "\tksi_sum =", ksi_sum
+        print "\tdual_val=", dual_val
+
+def question_19():
+    X_train, Y_train = read_data('features.train.txt')
+    X_test, Y_test = read_data('features.test.txt')
+    Y_train = np.sign(1. * (Y_train == 0) - .01)
+    Y_test = np.sign(1. * (Y_test == 0) - .01)
+
+    for g in [10000, 1000, 100, 10, 1]:
+        clf = SVC(C=0.1, kernel='rbf', gamma=g, shrinking=False)
+        clf.fit(X_train, Y_train)
+        P = clf.predict(X_test)
+        E_out = np.sum(P != Y_test) / float(P.shape[0])
+        print "gamma={0}, E_out={1}".format(g, E_out)
+
+
+def question_20():
+    X, Y = read_data('features.train.txt')
+    Y = np.sign(1. * (Y == 0) - .01)
+
+    test_time = 100
+    gammas = [10000, 1000, 100, 10, 1]
+    E_outs = {gamma: 0 for gamma in gammas}
+    for t in range(test_time):
+        print t
+        X_train, X_test, Y_train, Y_test = train_test_split(
+            X, Y, test_size=1000)
+        
+        select_gamma = 10000
+        min_E_out = 1
+        for g in gammas:
+            clf = SVC(C=0.1, kernel='rbf', gamma=g, shrinking=False)
+            clf.fit(X_train, Y_train)
+            P = clf.predict(X_test)
+            E_out = np.sum(P != Y_test) / float(P.shape[0])
+            if min_E_out > E_out:
+                min_E_out = E_out
+                select_gamma = g
+                
+        E_outs[select_gamma] += 1
+    print E_outs
+            
+question_20()

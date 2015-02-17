@@ -1,0 +1,54 @@
+
+;;; init.el --- Where all the magic begins
+;;
+;; Part of the Emacs Starter Kit
+;;
+;; This is the first thing to get loaded.
+;;
+
+;; load Org-mode from source when the ORG_HOME environment variable is set
+(when (getenv "ORG_HOME")
+  (let ((org-lisp-dir (expand-file-name "lisp" (getenv "ORG_HOME"))))
+    (when (file-directory-p org-lisp-dir)
+      (add-to-list 'load-path org-lisp-dir)
+      (require 'org))))
+
+;; load the starter kit from the `after-init-hook' so all packages are loaded
+(add-hook 'after-init-hook
+ `(lambda ()
+    ;; remember this directory
+    (setq starter-kit-dir
+          ,(file-name-directory (or load-file-name (buffer-file-name))))
+    ;; only load org-mode later if we didn't load it just now
+    ,(unless (and (getenv "ORG_HOME")
+                  (file-directory-p (expand-file-name "lisp"
+                                                      (getenv "ORG_HOME"))))
+       '(require 'org))
+    ;; load up the starter kit
+    (org-babel-load-file (expand-file-name "starter-kit.org" starter-kit-dir))
+    ;; load plugin
+    (global-auto-complete-mode 1)
+    (global-linum-mode 1)
+    (autopair-global-mode 1)
+    (ecb-activate)))
+
+;; mode configure
+(add-hook 'c++-mode-hook
+          `(lambda ()
+             (setq c-basic-offset 4
+                   c-default-style "linux"
+                   tab-width 4)
+             column-enforce-mode()))
+(add-hook 'python-mode-hook 'column-enforce-mode)
+
+(setq ecb-layout-name "left1")
+(global-set-key (kbd "C-c d") 'ecb-goto-window-directories)
+(global-set-key (kbd "C-c m") 'ecb-goto-window-methods)
+(global-set-key (kbd "C-c e") 'ecb-goto-window-edit1)
+(global-set-key (kbd "C-c h") 'ecb-goto-window-history)
+(global-set-key (kbd "C-c s") 'ecb-goto-window-sources)
+(global-set-key (kbd "C-=") 'er/expand-region)
+(global-set-key (kbd "C--") 'er/contract-region)
+(global-set-key (kbd "C-c C-g") 'goto-line)
+
+;;; init.el ends here
